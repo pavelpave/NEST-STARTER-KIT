@@ -45,9 +45,9 @@ class ConfigService {
 
       migrations: ['src/migration/*.ts'],
 
-      cli: {
-        migrationsDir: 'src/migration',
-      },
+      // cli: {
+      //   migrationsDir: 'src/migration',
+      // },
 
       ssl: this.isProduction(),
     };
