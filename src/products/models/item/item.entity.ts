@@ -1,12 +1,17 @@
-// item.entity.ts
-import { Entity, Column } from 'typeorm';
-import { BaseEntity } from '../base/base.entity';
+import {
+  Entity,
+  Property,
+  types,
+} from '@mikro-orm/core';
 
-@Entity({ name: 'item' })
-export class Item extends BaseEntity {
-  @Column({ type: 'varchar', length: 300 })
+@Entity({ tableName: 'brands' })
+export class Brand {
+  @Property({ type: types.text })
+  outerId: string;
+
+  @Property({ type: types.text })
   name: string;
 
-  @Column({ type: 'varchar', length: 300 })
-  description: string;
+  @Property({ type: types.boolean })
+  isPopular: boolean;
 }
