@@ -11,7 +11,7 @@ async function bootstrap() {
     cors: true,
   });
 
-  const conf: AppConfigService = app.get(AppConfigService);
+  // const conf: AppConfigService = app.get(AppConfigService);
 
   app.setGlobalPrefix('api');
   app.enableVersioning();
@@ -19,11 +19,11 @@ async function bootstrap() {
   // app.useGlobalFilters(new HttpExceptionFilter());
   // app.useGlobalInterceptors(new ErrorInterceptor());
 
-  if (conf.env !== 'production') {
+  // if (conf.env !== 'production') {
     setupSwagger(app);
-  }
+  // }
 
-  await app.listen(conf.port);
+  await app.listen(3000);
 }
 
 bootstrap().catch((err) => {
