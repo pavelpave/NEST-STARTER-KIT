@@ -3,8 +3,8 @@ import { DocumentBuilder, SwaggerModule } from "@nestjs/swagger";
 
 export function setupSwagger(app: INestApplication) {
   const config = new DocumentBuilder()
-    .setTitle("FIT APP")
-    .setDescription("All fit app api description")
+    .setTitle("STARTER-KIT")
+    .setDescription("All STARTER-KIT app api description")
     .setVersion("1.0")
     .addBearerAuth()
     .build();
